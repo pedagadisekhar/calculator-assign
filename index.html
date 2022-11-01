@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <center>
+    <h1>CALCULATOR APP</h1>
+</center>
+    <div class="container">
+        <center><h1>CALCULATOR APP</h1></center>
+        
+        <div class="calculator">
+<input type="text" placeholder="0" id="outer-element"/>
+<br/>
+
+<button onclick="del()">del</button>
+
+<button onclick="display('7')">7</button>
+<button onclick="display('8')">8</button>
+<button onclick="display('9')">9</button>
+
+<button onclick="display('4')">4</button>
+<button onclick="display('5')">5</button>
+<button onclick="display('6')">6</button>
+
+<button onclick="display('3')">3</button>
+<button onclick="display('2')">2</button>
+<button onclick="display('1')">1</button>
+<button onclick="display('*')">*</button>
+<button onclick="display('-')">-</button>
+<button onclick="display('+')">+</button>
+<button onclick="display('%')">%</button>
+<button onclick="display('/')">/</button>
+<button onclick="display('.')">.</button>
+<button onclick="calculate()">=</button>
+<button onclick="clear()">cl</button>
+
+ </div>
+    
+</div>
+<script>
+    let outerscreen = document.getElementById("outer-element");
+     function display(num){
+        outerscreen.value += num
+     }
+     function calculate(){
+        try {
+            outerscreen.value = eval(outerscreen.value)
+        } catch (error) {
+            alert("invalid")
+        }
+     }
+     function clear(){
+        outerscreen.value="";
+     }
+  function del(){
+     outerscreen.value = outerscreen.value.slice(0,-1)
+  }
+
+</script>
+
+
+
+
+
+</body>
+</html>

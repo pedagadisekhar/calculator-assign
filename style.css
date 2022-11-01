@@ -1,0 +1,21 @@
+.container{
+    margin: 500px;
+}
+
+.calculator{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 30px;
+    text-align: center;
+}
+input{
+    width: 70%;
+}
+button{
+    height:60px;
+    background-color: blue;
+    color: antiquewhite;
+    border-radius: 5%;
+    border: 1ch ridge black;
+    padding: 2px 2px 2px 2px;
+}
